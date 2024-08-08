@@ -32,14 +32,6 @@ General usage example:
 </masonry-gallery>
 ```
 
-## Features
-
-Here are the attributes available to masonry-gallery:
-
-| Attribute | Type     | Default | Description                                      |
-| --------- | -------- | ------- | ------------------------------------------------ |
-| `columns` | `string` | `"3"`   | Sets the number of columns in the masonry layout |
-
 ## Installation
 
 You have a few options (choose one of these):
@@ -47,7 +39,7 @@ You have a few options (choose one of these):
 1. Install via [npm](https://www.npmjs.com/package/masonry-gallery): `npm install masonry-gallery`
 2. [Download the source manually from GitHub](https://github.com/andrico1234/masonry-gallery/releases) into your project.
 
-### Usage
+## Usage
 
 Make sure you include the `<script>` in your project (choose one of these):
 
@@ -55,3 +47,26 @@ Make sure you include the `<script>` in your project (choose one of these):
 <!-- Host yourself -->
 <script type="module" src="masonry-gallery.js"></script>
 ```
+
+masonry-gallery doesn't use the shadow DOM, meaning you can style it from your main CSS file.
+
+```css
+masonry-gallery {
+  border: 6px dashed red;
+  padding: 12px;
+}
+
+masonry-gallery > .masonry-gallery-column {
+  gap: 16px;
+}
+```
+
+This package barely includes any default styles, so it's completely up to you to style it.
+
+## Features
+
+Here are the attributes available to masonry-gallery:
+
+| Attribute | Type     | Default | Description                                      |
+| --------- | -------- | ------- | ------------------------------------------------ |
+| `columns` | `string` | `"3"`   | Sets the number of columns in the masonry layout |
