@@ -5,7 +5,9 @@
   "type": "module",
   "main": "masonry-gallery.js",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "publish": "np",
+    "test": "exit 0"
   },
   "repository": {
     "type": "git"
