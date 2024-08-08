@@ -125,10 +125,10 @@ class MasonryGallery extends HTMLElement {
     })
 
     const colHeights = Array.from({ length: colCount }, () => 0);
-
     const haveImagesLoaded = !isEmpty(this.loadedImages);
 
     let currI = 0;
+    
     while (children.length) {
       const child = children[0];
       const src = child.getAttribute("src");
