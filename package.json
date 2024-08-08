@@ -1,11 +1,10 @@
 {
   "name": "masonry-gallery",
-  "version": "1.0.0",
-  "description": "A Web Component for…",
+  "version": "0.1.0",
+  "description": "A Masonry Layout web component",
   "type": "module",
   "main": "masonry-gallery.js",
   "scripts": {
-    "start": "npx http-server .",
     "dev": "vite"
   },
   "repository": {
