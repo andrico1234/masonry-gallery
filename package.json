@@ -1,14 +1,15 @@
 {
-  "name": "@daviddarnes/component-name",
+  "name": "masonry-gallery",
   "version": "1.0.0",
   "description": "A Web Component for…",
-  "main": "component-name.js",
+  "type": "module",
+  "main": "masonry-gallery.js",
   "scripts": {
-    "start": "npx http-server ."
+    "start": "npx http-server .",
+    "dev": "vite"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/daviddarnes/component-name.git"
+    "type": "git"
   },
   "keywords": [
     "web",
@@ -21,13 +22,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "bugs": {
-    "url": "https://github.com/daviddarnes/component-name/issues"
-  },
   "author": {
-    "name": "David Darnes",
-    "email": "me@daviddarnes.com",
-    "url": "https://darn.es/"
+    "name": "Andrico Karoulla",
+    "url": "https://andri.co/"
   },
-  "homepage": "https://github.com/daviddarnes/component-name#readme"
+  "devDependencies": {
+    "np": "^10.0.7",
+    "vite": "^5.3.5"
+  }
 }

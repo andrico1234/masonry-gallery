@@ -1,39 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Demo of component-name Web Component" />
-    <title>component-name Web Component Demo</title>
 
-    <script type="module" src="component-name.js"></script>
-  </head>
-  <body>
-    <h2>General usage example</h2>
-    <component-name>
-      <button>Button</button>
-    </component-name>
-    <hr />
-    <h2>Example using a fallback method</h2>
-    <component-name>
-      <button>Button</button>
-      <a href="#">Anchor</a>
-    </component-name>
-    <style>
-      component-name:not(:defined) button,
-      component-name:defined a {
-        display: none;
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Demo of component-name Web Component" />
+  <title>Masonry Gallery | Web Component Demo</title>
+</head>
+
+<body>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    img {
+      min-width: 160px;
+      width: 100%;
+      object-fit: contain;
+      max-width: 300px;
+      display: block;
+    }
+
+    masonry-gallery {
+      margin-bottom: 16px;
+      padding: 8px;
+      border: 2px solid black;
+      width: fit-content;
+      gap: 16px;
+    }
+
+    masonry-gallery:not(:defined) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+
+    .masonry-gallery-column {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .masonry-gallery-column:empty {
+      display: none;
+    }
+  </style>
+
+  <h2>General usage example</h2>
+
+  <h3>Default 3 Column Layout</h3>
+  <masonry-gallery>
+    <img src="images/1.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/2.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/3.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/4.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/5.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/6.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/7.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/8.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/9.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/10.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/11.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/12.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/13.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/14.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/15.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/16.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/17.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/18.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="images/19.jpg" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="https://placedog.net/500" loading="lazy" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="https://placedog.net/501" loading="lazy" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="https://placedog.net/502" loading="lazy" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="https://placedog.net/503" loading="lazy" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="https://placedog.net/504" loading="lazy" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="https://placedog.net/505" loading="lazy" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="https://placedog.net/506" loading="lazy" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="https://placedog.net/507" loading="lazy" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="https://placedog.net/508" loading="lazy" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="https://placedog.net/509" loading="lazy" alt="Lydia Mackenzie Dance + Fitness" />
+  </masonry-gallery>
+
+  <h3>Manual 2 Column Layout</h3>
+  <masonry-gallery columns="2">
+    <img src="https://placedog.net/600/400" alt="A random cute dog" />
+    <img src="https://placedog.net/220/450" alt="A random cute dog" />
+    <img src="https://placedog.net/1000/200" alt="A random cute dog" />
+    <img src="https://placedog.net/909/210" alt="A random cute dog" />
+    <img src="https://placedog.net/430/900" alt="A random cute dog" />
+    <img src="https://placedog.net/338" alt="A random cute dog" />
+  </masonry-gallery>
+
+  <h3>Manual 6 Column Layout</h3>
+  <masonry-gallery columns="6">
+    <img src="https://placedog.net/600/400" alt="A random cute dog" />
+    <img src="https://placedog.net/220/450" alt="A random cute dog" />
+    <img src="https://placedog.net/220/450" alt="A random cute dog" />
+    <img src="https://placedog.net/220/450" alt="A random cute dog" />
+    <img src="https://placedog.net/1000/200" alt="A random cute dog" />
+    <img src="https://placedog.net/909/210" alt="A random cute dog" />
+    <img src="https://placedog.net/430/900" alt="A random cute dog" />
+    <img src="https://placedog.net/338" alt="A random cute dog" /><img src="https://placedog.net/502" loading="lazy"
+      alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="https://placedog.net/503" loading="lazy" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="https://placedog.net/504" loading="lazy" alt="Lydia Mackenzie Dance + Fitness" />
+    <img src="https://placedog.net/505" loading="lazy" alt="Lydia Mackenzie Dance + Fitness" />
+  </masonry-gallery>
+
+  <h3>Empty Gallery (console warning)</h3>
+
+  <masonry-gallery></masonry-gallery>
+
+  <h3>Dynamically add/remove images</h3>
+  <button id="add-to-gallery">
+    Add image to gallery
+  </button>
+  <button id="remove-from-gallery" disabled>
+    Remove random image
+  </button>
+
+  <masonry-gallery id="dynamic-masonry"></masonry-gallery>
+
+  <script type="module">
+    const getRandomNumber = (min, max) => {
+      const diff = max - min;
+      const random = Math.floor((Math.random() * diff) + min);
+      return random;
+    }
+
+    const dynamicMasonry = document.getElementById('dynamic-masonry');
+    const addButton = document.getElementById('add-to-gallery');
+    const removeButton = document.getElementById('remove-from-gallery');
+
+    addButton.addEventListener('click', () => {
+      const width = getRandomNumber(200, 800);
+      const height = getRandomNumber(200, 800);
+      const imgEl = document.createElement('img');
+
+      imgEl.src = `https://placedog.net/${width}/${height}`;
+      imgEl.alt = "Dog placeholder"
+
+      dynamicMasonry.appendChild(imgEl);
+
+      removeButton.removeAttribute('disabled')
+    })
+
+    removeButton.addEventListener('click', () => {
+      const privateContentClone = dynamicMasonry._elClone;
+      const content = privateContentClone.children;
+      const colEls = document.querySelectorAll('#dynamic-masonry .masonry-gallery-column');
+      const children = Array.from(colEls).map(x => Array.from(x.children)).flat();
+
+      if (!content.length) {
+        return;
       }
-    </style>
-    <hr />
-    <h2>Example using options or additional fallback method</h2>
-    <component-name attribute="value">
-      <button>Button</button>
-    </component-name>
-    <style>
-      component-name[attribute="value"] {
-        outline: 1px solid red;
+
+      const randomNumber = getRandomNumber(0, children.length);
+      const imgToDelete = children[randomNumber];
+
+      imgToDelete.remove();
+
+      if (!content.length) {
+        removeButton.setAttribute('disabled', '')
       }
-    </style>
-  </body>
+    })
+  </script>
+
+  <script type="module" src="masonry-gallery.js"></script>
+</body>
+
 </html>
