@@ -2,9 +2,7 @@
 
 A Web Component for a Masonry layout gallery.
 
-**[Demo](./)**
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/~/github.com/daviddarnes/component-template?file=masonry-gallery.js&initialPath=/demo.html)
+**[Demo](https://masonry-gallery-wc.netlify.app/)**
 
 ## Examples
 
