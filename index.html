@@ -17,6 +17,7 @@
     body {
       font-family: system-ui;
       max-width: 900px;
+      padding-inline: 8px;
       margin-inline: auto;
     }
 
@@ -30,6 +31,7 @@
 
     masonry-gallery {
       margin-bottom: 16px;
+      margin-inline: auto;
       padding: 8px;
       border: 2px solid black;
       width: fit-content;
@@ -57,15 +59,15 @@
 
   <a href="https://github.com/andrico1234/masonry-gallery">Docs</a>
 
-  <h2>General usage example</h2>
+  <h2>Examples</h2>
 
   <h3>Default 3 Column Layout</h3>
 
   <masonry-gallery>
     <img src="https://placedog.net/600/400" alt="A random cute dog" />
     <img src="https://placedog.net/220/450" alt="A random cute dog" />
-    <img src="https://placedog.net/220/450" alt="A random cute dog" />
-    <img src="https://placedog.net/220/450" alt="A random cute dog" />
+    <img src="https://placedog.net/210/650" alt="A random cute dog" />
+    <img src="https://placedog.net/632/460" alt="A random cute dog" />
     <img src="https://placedog.net/1000/200" alt="A random cute dog" />
     <img src="https://placedog.net/909/210" alt="A random cute dog" />
     <img src="https://placedog.net/430/900" alt="A random cute dog" />
@@ -86,7 +88,6 @@
     <img src="https://placedog.net/503" alt="A random cute dog" />
     <img src="https://placedog.net/504" alt="A random cute dog" />
     <img src="https://placedog.net/505" alt="A random cute dog" />
-
   </masonry-gallery>
 
   <h3>Manual 2 Column Layout</h3>
@@ -174,7 +175,10 @@
 
   <masonry-gallery></masonry-gallery>
 
-  <script type="module" src="masonry-gallery.js"></script>
+  <p>Created by Andrico Karoulla</p>
+  <a href="https://github.com/andrico1234/masonry-gallery">GitHub</a> | <a href="https://front-end.social/@andrico">Mastodon</a> | <a href="https://x.com/AndricoKaroulla">X</a>
+
+  <script type="module" src="./masonry-gallery.js"></script>
 </body>
 
 </html>
